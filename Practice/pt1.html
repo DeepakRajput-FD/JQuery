@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Registration Form </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main-wrapper
+        {
+            width: 20%;
+            margin: 100px auto;
+            border: 5px solid #ededed;
+            border-top: 5px solid orange;
+            /* border: 5px solid black; */
+            font-family: sans-serif;
+            text-transform: capitalize;
+        }
+        h2{
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+        .input-wrapper
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .input-wrapper input
+        {
+            width: 80%;
+            padding: 10px 30px;
+            margin: 10px ;
+        }
+        .Equaility
+        {
+            display: flex;
+            align-items: center;
+            padding: 10px 10px 10px 40px;
+            column-gap: 10px;
+            /* padding-left: 0px; */
+            /* flex-direction: column; */
+        }
+        .country
+        {
+            display: flex;
+            justify-content: center;
+        }
+        select
+        {
+            padding: 10px 0px ;
+            width: 80%;
+            margin: 10px 0px;
+        }
+        .checkboxes
+        {
+            padding: 10px 15px;
+            display: flex;
+            align-content: center;
+            row-gap: 10px;
+            flex-direction: column;
+        }
+        .block
+        {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        button
+        {
+            padding: 10px 0px;
+            width: 80%;
+            background-color: orange;
+            color: white;
+            font-size: 15px;
+            font-weight: 500;
+            border: 0;
+        }
+        i
+        {
+            position: absolute;
+            font-size: 20px;
+            left: 35px;
+        }
+        .fa-envelope
+        {
+            top: 87px;
+        }
+        #pwd1
+        {
+            top: 145px;
+            /* left: 35px; */
+        }
+        #pwd2
+        {
+            top: 205px;
+        }
+        #user1
+        {
+            top: 262px;
+        }
+        #user2
+        {
+            top: 322px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+
+        <div class="input-wrapper">
+            <h2>responsive Registration form</h2>
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email"  id="email" placeholder="Email" onblur="function_email(this,'spnid1')">
+            <span id="spnid1"></span>
+            <i class="fa-solid fa-lock" id="pwd1"></i>
+            <input type="password" id="password" placeholder="Password">
+            <span id="spnid2"></span>
+            <i class="fa-solid fa-lock" id="pwd2"></i>
+            <input type="password" id="password" placeholder="Re-type Password">
+            <span id="spnid3"></span>
+            
+            <i class="fa-solid fa-user" id="user1"></i>
+            <input type="text" placeholder="First Name">
+            <span id="spnid4"></span>
+            <i class="fa-solid fa-user" id="user2"></i>
+            <input type="text" placeholder="Last Name">
+            <span id="spnid5"></span>
+        </div>
+
+        <div class="Equaility">
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+        </div>
+        
+        <div class="country">
+            <select name="country-name" id="country-name">
+                <option value="Select a country">Select a country</option>
+                <option value="India">India</option>
+                <option value="Dubai">Dubai</option>
+                <option value="London">London</option>
+                <option value="pak">pak</option>
+            </select>
+        </div>
+    
+        <div class="checkboxes">
+            <div class="checkbox1">
+       <input type="checkbox" id="check1">
+       <label for="check1">i agree with  terms & conditions</label>
+       </div>
+       <div class="checkbox2">
+       <input type="checkbox" id="check2">
+       <label for="check2">i want to receive the newsletter</label>
+        </div>        
+    </div>
+
+    <div class="block">
+        <button id="submit">
+            Register
+        </button>
+        </div>
+
+    </div>
+
+    <script src="..//jQuery/jquery-3.7.1.min.js"></script>
+    
+    <script>
+        $(document).ready(function()  {
+            
+        });
+    </script>
+
+</body>
+</html>

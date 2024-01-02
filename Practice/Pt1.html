@@ -11,7 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        #block
+        #block,#funky
         {
             margin: 100px auto;
             width: 350px;
@@ -31,29 +31,35 @@
 <body>
     
     <div id="block">
-        <button id="b1">
+        <button class="b1">
             Click
     </button>
+    </div>
+
+    <div id="funky">
+        <button class="b1">clicked</button>
     </div>
 
     <script src="..//jQuery/jquery-3.7.1.min.js"></script>
 
     <script>
         $(document).ready(function ()  {
-            $('#b1').click(function () {
-                $('#b1').css("background",'green');
-                $('#block').css('background','crimson');
-                $('#block').css('transform','translateX(-300px)');
-                $('#block').css('transition','all 3s');
-                $('#block').css('transform','translateX(300px)');
-                $('#block').css('transition','all 3s');
-            // let b=document.getElementById('block');
-                
-            // b.style.background="red";
-            // b.style.transform="translateX(300px)";
-                // console.log(b);
-                // b.style.transition="all 2s"
-            })
+            
+            $('.b1').click(function () {
+                $('.b1').css({"background":'green'});//jquery to use css in jquery
+                // $('#block').css('background','crimson');//multiple line of code
+                // $('#block').css('transform','translateX(-300px)');multiple line of code
+                // $('#block').css('transition','all 3s');multiple line of code
+                $('#block').css({'background':'crimson','transform':'translateX(300px)','transition':'all 3s','opacity':'0.5'});//one line of code
+                    // {'background':'green','transform':'translateX(-300px)','transition':'all 3s'}
+                    $('#funky').css({'background':'crimson','transform':'translateX(-300px)','transition':'all 3s','opacity':'0.5'});
+            });
+
+            // $("#b1").click( function ()
+            //     {
+            //         console.log("why");
+            //         $("#funky").css({'background':'green','transform':'translateX(-300px)','transition':'all 3s'});
+            //     });
         });
     </script>
 

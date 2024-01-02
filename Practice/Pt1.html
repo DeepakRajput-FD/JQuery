@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #block
+        {
+            margin: 100px auto;
+            width: 350px;
+            height: 350px;
+            border: 2px solid black;  
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+        }
+        button
+        {
+            padding: 10px 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="block">
+        <button id="b1">
+            Click
+    </button>
+    </div>
+
+    <script src="..//jQuery/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function ()  {
+            $('#b1').click(function () {
+                $('#b1').css("background",'green');
+                $('#block').css('background','crimson');
+                $('#block').css('transform','translateX(-300px)');
+                $('#block').css('transition','all 3s');
+                $('#block').css('transform','translateX(300px)');
+                $('#block').css('transition','all 3s');
+            // let b=document.getElementById('block');
+                
+            // b.style.background="red";
+            // b.style.transform="translateX(300px)";
+                // console.log(b);
+                // b.style.transition="all 2s"
+            })
+        });
+    </script>
+
+</body>
+</html>

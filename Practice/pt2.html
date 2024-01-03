@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice for dropdown color</title>
+</head>
+<body>
+    <select id="inputes" onchange="myfunction(event)" style="padding: 10px;">
+         <option value="White">White</option> <!--that are targets  and value="fjnv"//these are the input value  -->
+        <option value="Yellow">Yellow</option>
+        <option value="Blue">Blue</option>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Black">Black</option>
+        <option value="Brown">Brown</option>
+        <option value="Azure">Azure</option>
+        <option value="Ivory">Ivory</option>
+        <option value="Teal">Teal</option>
+    </select>
+
+    <script>
+        function myfunction(d)
+         {
+           input= document.getElementById('inputes');
+
+
+           for (let i = 0; i < input.length; i++)
+            {
+
+                   if (d.target.value==input[i].value)//it is target the value means which value to click. and it is compare the value and it is find the value in array.
+                    {
+                        document.body.style.background=input[i].value;
+                        alert("the Background-color is "+input[i].value);
+                    }
+            
+           }
+        //    document.body.style.background=input.value;
+        }
+    </script>
+
+</body>
+</html>

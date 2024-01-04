@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    
+   <input type="text" id="input1" placeholder="enter value 1st">
+   <input type="text" id="input2" placeholder="enter value 2nd">
+   <button id="b1">Click</button>
+
+    <script src="..//jQuery/jquery-3.7.1.min.js"></script>
+    <script>
+        
+        // console.log($);
+        $(document).ready(function () {
+
+            $('#b1').click(function ()
+             {
+                // $('#input1').val();
+                console.log( $('#input1').val());
+                console.log($('#input2').val());
+                // let c=$('#input1').val()+$('#input2').val;
+                // console.log(c.value);    
+            });
+          
+        });
+
+    </script>
+</body>
+</html>

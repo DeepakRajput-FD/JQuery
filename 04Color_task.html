@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop-down-color</title>
+    
+    <style>
+      
+    </style>
+
+</head>
+<body>
+   
+
+    <select name="" onchange="color(event)" id="select1">
+        <option value="red"  >red</option>
+        <option value="green">green</option>
+        <option value="blue" >blue</option>
+        <option value="teal" >teal</option>
+        <option value="orange" >orange</option>
+    </select>
+
+    <script src="./jQuery/jquery-3.7.1.min.js"></script>
+    
+    <script>
+        // $(document).ready(function (){
+
+         let input = document.getElementsByTagName('option');
+
+        //   input2.style.background=input.value;
+        //   console.log(input[0].value);
+        //   for (let i = 0; i < input.length; i++)
+        //    {
+        //     input2.style.background = input[i].value
+        //   }
+            // document.body.style.background=input.value;
+
+        // }
+        // );
+                 function color(e){
+
+                    for(let i=0; i<input.length; i++){
+                        if(e.target.value == input[i].value){//target means what you select current item.
+                        document.body.style.background = input[i].value
+                        alert('this color name is '+input[i].value);
+                    }
+                    }
+                 }
+                 
+
+                 
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effects</title>
+</head>
+<body>
+    
+    <div class="blocks">
+    <h1>Fade in Jquery</h1>
+    <button class="FadeIn">Fade In</button>
+    <button class="FadeOut">Fade Out</button>
+    <button class="FadeToggle">Fade Toggle</button>
+    <button class="FadeTo">Fade To</button>
+        </div>
+    <div class="block">
+        <p>
+            You wanna see magic in blocks
+        </p>
+    </div>
+
+    <script src="..//jQuery/jquery-3.7.1.min.js"></script>
+    
+    <script>
+        
+        $('body').ready(function ()
+         {
+            $('body').css({'background':'red','text-align':'center'}); 
+            $('.blocks').css({'background':'teal','border':'1px solid black','margin':'auto'}); 
+            $('button').css({'background':'red','color':'khaki'}); 
+            $('.block').css({'background':'red','color':'khaki'}); 
+        });
+    </script>
+
+    <script>
+        $(document).ready(function ()
+         {
+            $('.FadeOut').click(function ()
+             {
+                 $('.block').fadeOut(2000);   
+            });    
+        });
+    </script>
+
+</body>
+</html>

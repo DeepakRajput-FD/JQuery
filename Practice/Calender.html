@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+    <input type="time" id="time1" step="1" >
+    <button onclick="check()">
+        click
+    </button>
+    <script>
+        let time1= document.getElementById('time1');
+        let date1=new Date();
+        let hours=date1.getHours();
+        function check()
+        {
+            console.log(hours);
+            console.log(date1);
+            console.log(time1.value);
+        }
+    </script>
+</body>
+</html>

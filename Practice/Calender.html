@@ -4,22 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
+<style>
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    .parent
+    {
+        width: fit-content;
+        border: 5px solid;
+        border-radius: 10px;
+        margin: 20px 10px;
+        display: flex;
+        column-gap: 10px;
+        background: linear-gradient(rgb(78, 228, 100),yellow,pink);
+        color: green;
+        font-size: 50px;
+    }
+    .Main-parent
+    {
+        width: fit-content;
+        border: 5px solid black;
+        font-size: 30px;
+        color: black;
+        display: flex;
+        column-gap: 10px;
+        background: linear-gradient(teal,aliceblue);
+        margin: 20px 10px;
+    }
+</style>
 </head>
 <body>
-    <input type="time" id="time1" step="1" >
-    <button onclick="check()">
-        click
-    </button>
+
+    <div class="Main-parent">
+        <p id="p4"></p>
+        <p id="p5"></p>
+        <p id="p6"></p>
+        <p id="p7"></p>
+    </div>
+
+    <div class="parent">
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+    </div>
+   
     <script>
-        let time1= document.getElementById('time1');
-        let date1=new Date();
-        let hours=date1.getHours();
-        function check()
-        {
-            console.log(hours);
-            console.log(date1);
-            console.log(time1.value);
+        function check() {
+            let date=new Date();
+            
+            let hours=date.getHours();
+            let minute=date.getMinutes();
+            let second=date.getSeconds();
+
+            
+            // if (hours==12)
+            // {
+            //     hours=0;
+            //     document.getElementById('parent').innerHTML=second+'pm';
+            //     hours++;
+            // }
+            document.getElementById('p1').innerHTML=hours+':';
+            document.getElementById('p2').innerHTML=minute+':';
+            document.getElementById('p3').innerHTML=second;
+
         }
+        check();
+        setInterval(check,1000);
+
+        function second()
+        { 
+        let date=new Date();
+        let subdata=date.getDay();
+
+      if (subdata==1)
+       {
+        subdata= "Monday";  
+        }
+        else if (subdata==2)
+         {
+        subdata="Tuesday";  
+        }
+        else if (subdata==3) 
+        {
+        subdata="wednesday";  
+        } 
+        else if (subdata==4) 
+        {
+                subdata="Thursday";  
+        } 
+        else if (subdata==5)
+         {
+                subdata="Friday";  
+        }
+         else if (subdata==6)
+          {
+                subdata="saturday";  
+        }
+         else if (subdata==7)
+          {
+                subdata="Sunday";  
+        }
+        else
+        {
+            subdata='Thanks';
+        }
+        document.getElementById('p4').innerHTML=subdata+',';
+
+        let month=date.getMonth();
+
+        switch(month)
+        {
+        case 0:
+          month="January";
+          break;
+        case 1:
+          month="February";
+          break;
+        case 2:
+          month="March";
+          break;
+        case 3:
+          month="April";
+          break;
+        case 4:
+          month="May";
+          break;
+        case 5:
+          month="June";
+          break;
+        case 6:
+          month="July";
+          break;
+        case 7:
+          month="August";
+          break;
+        case 8:
+          month="September";
+          break;
+        case 9:
+          month="October";
+          break;
+        case 10:
+          month="November";
+          break;
+        case 11:
+          month="December";
+          break;
+        default:
+          month="Invalid month";
+      }
+      document.getElementById('p5').innerHTML=month;
+
+      let day=date.getDay();
+      document.getElementById('p6').innerHTML=day+',';
+
+      let year=date.getFullYear();
+      document.getElementById('p7').innerHTML=year;
+    }
+    second();
+    setInterval(second,1000);
+
+
+
     </script>
 </body>
 </html>

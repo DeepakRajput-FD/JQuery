@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Ancestors Traversing</title>
+    <style>
+        *{
+            margin: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    body
+    <div class="great-grand-parent">
+      great-grand-parent
+      <div class="grand-parent">
+        grand-parent
+        <div class="parent">
+          parent
+          <div class="child">child-1</div>
+          <div class="child">child-2</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery  -->
+
+    <script src="..//jQuery/jquery-3.7.1.min.js"></script>
+
+    <script>
+      console.log($);
+
+
+      $(document).ready(function () {
+
+        // Parent 
+        $('.child').parent().css({border: '3px solid red'})//it is only access their parents or it is only going to their direct child.
+
+        //if you set any color in their parent but is not work because it gives their priority to their parent and parents until
+
+        
+        // $('.parent').parent().css({border: '3px solid green'})
+        // $('.grand-parent').parent().css({border: '3px solid blue'})
+        // $('.great-grand-parent').parent().css({border: '3px solid black'})
+
+
+        // parents 
+
+        $('.child').parents().css({border: '3px solid red'})//It means it is access all their parents.  
+        // $('.parent').parents().css({border: '3px solid blue'})
+        // $('.grand-parent').parents().css({border: '3px solid blue'})
+
+
+
+        // ParentsUntil
+
+        //it means you set the limit where place to going their child's properties or to access. 
+        $('.child').parentsUntil('.grand-parent').css({border: '3px solid green'});
+
+
+      });
+    </script>
+  </body>
+</html>

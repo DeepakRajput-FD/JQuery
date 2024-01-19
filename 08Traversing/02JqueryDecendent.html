@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Descendants Traversing</title>
+    <style>
+        *{
+            margin: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    body
+    <div class="great-grand-parent">
+      great-grand-parent
+      <div class="grand-parent">
+        grand-parent
+        <div class="parent">
+          parent
+          <div class="child">child-1</div>
+          <div class="child">child-2</div>
+        </div>
+      </div>
+    </div>
+
+    <button class="childern">
+        childern
+    </button>
+
+    <button class="find">Find</button>
+
+    <!-- jQuery  -->
+
+    <script src="../jQuery/jquery-3.7.1.min.js"></script>
+
+    <script>
+      console.log($);
+
+
+      $(document).ready(function () {
+
+        $('.childern').click(function ()
+         {
+            $('.parent').children().css({'background-color':'red'});
+            $('.great-grand-parent').children().css({'background-color':"blue"});
+        });
+
+        
+        $('.find').click(function ()
+         {
+             $('.great-grand-parent').find('.child').css({'background-color':'green'});   
+             $('.child').find('.grand-parent').css({'background-color':'teal'});   //it is not work. for this line.
+        });
+        
+        // Children 
+        //children method is used to return their parents direct children.
+
+
+        // $('html').children().css({border: '3px solid blue'})
+        // $('body').children().css({border: '3px solid blue'})
+        // $('.great-grand-parent').children().css({border: '3px solid blue'})
+        // $('.grand-parent').children().css({border: '3px solid red'})
+        // $('.parent').children().css({border: '3px solid green'})
+       
+
+
+        // find 
+
+        $('.great-grand-parent').find('.parent').css({border: '3px solid blue'})
+        $('.great-grand-parent').find('.child').css({border: '3px solid red'})
+        $('.great-grand-parent').find('.grand-parent').css({border: '3px solid green'})
+        
+
+
+
+
+
+
+      });
+    </script>
+  </body>
+</html>

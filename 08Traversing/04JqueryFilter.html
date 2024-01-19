@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Siblings Traversing</title>
+    <style>
+        *{
+            margin: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    
+          <div class="child">child-1</div>
+          <div class="child">child-2</div>
+          <div class="child box">child-3</div>
+      
+
+    <!-- jQuery  -->
+
+    <script src="../jQuery/jquery-3.7.1.min.js"></script>
+
+    <script>
+      console.log($);
+
+
+      $(document).ready(function () {
+        // Siblings
+    
+        $('.child').css({backgroundColor: 'pink'}).filter('.box').css({border: '3px solid blue'});
+        //it is accept as div or tag but it is filter || it is check if it is avaliable then it is apply their property
+      });
+    </script>
+  </body>
+</html>

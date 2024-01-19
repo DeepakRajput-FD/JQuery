@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Siblings Traversing</title>
+    <style>
+        *{
+            margin: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    body
+    <div class="great-grand-parent">
+      great-grand-parent
+      <div class="grand-parent">
+        grand-parent
+        <div class="parent">
+          parent
+          <div class="child">child-1</div>
+          <div class="box">child-1</div>
+          <div class="child">child-2</div>
+          
+        </div>
+        
+      </div>
+    </div>
+
+    <button class="Siblings">
+        Siblings
+    </button>
+
+    <!-- jQuery  -->
+
+    <script src="../jQuery/jquery-3.7.1.min.js"></script>
+
+    <script>
+      console.log($);
+
+
+      $(document).ready(function () {
+
+        $('.Siblings').click(function ()
+         {
+            $('.parent').siblings().css({'background-color':'green'});//it is not worked because they have no siblings.
+            $('.box').siblings().css({'background-color':'yellow'});//it is used only for their siblings.
+        });
+       
+
+
+        // Siblings
+        //it is return their siblings 
+      
+        $('.child').siblings().css({border: '3px solid green'})
+   
+
+
+
+
+
+
+      });
+    </script>
+  </body>
+</html>
